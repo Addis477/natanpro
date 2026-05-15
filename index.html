@@ -2,895 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Nate Café & Restaurant | Addis Ababa | Premium Dining</title>
-    <meta name="description" content="Nate Café & Restaurant - Premium dining in Addis Ababa. Breakfast, traditional Ethiopian food, pizza, burgers, wraps, salads, mocktails & more.">
-    <meta name="keywords" content="Nate Café, Addis Ababa restaurant, Ethiopian food, pizza, burgers, breakfast, mocktails">
-    <meta name="author" content="Nate Café & Restaurant">
-    <meta property="og:title" content="Nate Café & Restaurant | Addis Ababa">
-    <meta property="og:description" content="Premium dining in the heart of Ethiopia. Breakfast, pizza, burgers, traditional food & more.">
-    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate Café & Restaurant | Addis Ababa | Home</title>
+    <meta name="description" content="Nate Café & Restaurant - Premium dining in Addis Ababa. Fresh ingredients, bold flavors, unforgettable moments.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root {
-            --green: #2D8A4E;
-            --green-dark: #1B6B34;
-            --green-light: #4CAF6E;
-            --green-bg: #0A1F12;
-            --green-card: #0F2D1A;
-            --green-surface: #0A2A16;
-            --gold: #C9A96E;
-            --gold-dark: #B8933F;
-            --gold-light: #E8D5A3;
-            --white: #FFFFFF;
-            --gray: #8FA89A;
-            --gray-light: #B8D4C2;
-            --radius-sm: 8px;
-            --radius: 16px;
-            --radius-lg: 24px;
-            --radius-xl: 32px;
-            --shadow: 0 4px 20px rgba(0,0,0,0.4);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
-            --shadow-xl: 0 20px 60px rgba(0,0,0,0.6);
-            --shadow-green: 0 8px 25px rgba(45,138,78,0.3);
-            --shadow-gold: 0 8px 25px rgba(201,169,110,0.25);
-            --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
-            --transition-slow: 0.5s cubic-bezier(0.4,0,0.2,1);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--green-bg);
-            color: #E8F5EC;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* ============ SCROLL ANIMATIONS ============ */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(35px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInLeft {
-            from { opacity: 0; transform: translateX(-35px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes fadeInRight {
-            from { opacity: 0; transform: translateX(35px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes shimmer {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
-        }
-        @keyframes floatSlow {
-            0%,100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ============ TOP BAR ============ */
-        .topbar {
-            background: #051A0D;
-            color: var(--gray-light);
-            text-align: center;
-            padding: 10px 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .topbar i { color: var(--gold); margin: 0 5px; }
-        .topbar span { color: var(--gold); font-weight: 600; }
-
-        /* ============ NAVIGATION ============ */
-        .nav-bar {
-            background: rgba(10,31,18,0.97);
-            backdrop-filter: blur(25px);
-            border-bottom: 1px solid rgba(45,138,78,0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 0 2rem;
-        }
-        .nav-inner {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.9rem 0;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            color: var(--gold);
-            font-family: 'Playfair Display', serif;
-            cursor: pointer;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            background: var(--green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            box-shadow: var(--shadow-green);
-        }
-        .logo-text span {
-            color: var(--green-light);
-            font-weight: 400;
-            font-size: 0.7rem;
-            letter-spacing: 3px;
-            display: block;
-        }
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .nav-links a {
-            text-decoration: none;
-            font-weight: 500;
-            color: var(--gray-light);
-            transition: var(--transition);
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-            position: relative;
-            padding: 6px 0;
-        }
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gold);
-            transition: var(--transition);
-            border-radius: 2px;
-        }
-        .nav-links a:hover { color: var(--gold); }
-        .nav-links a:hover::after { width: 100%; }
-        .nav-cta-btn {
-            background: var(--green);
-            color: #fff !important;
-            padding: 10px 22px !important;
-            border-radius: 50px !important;
-            font-weight: 600 !important;
-            box-shadow: var(--shadow-green);
-            transition: var(--transition);
-        }
-        .nav-cta-btn:hover {
-            background: var(--green-dark) !important;
-            transform: translateY(-2px);
-        }
-        .nav-cta-btn::after { display: none !important; }
-
-        .mobile-menu-btn {
-            display: none;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: #fff;
-            font-size: 22px;
-            padding: 10px 14px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-        }
-
-        /* ============ HERO ============ */
-        .hero {
-            position: relative;
-            background: linear-gradient(0deg, rgba(10,31,18,0.88) 0%, rgba(10,31,18,0.35) 100%),
-                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80') center/cover no-repeat;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 180px;
-            background: linear-gradient(0deg, var(--green-bg) 0%, transparent 100%);
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 750px;
-            padding: 3rem;
-            animation: scaleIn 0.8s ease forwards;
-        }
-        .hero-badge {
-            display: inline-block;
-            background: var(--green);
-            color: white;
-            padding: 8px 22px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            box-shadow: var(--shadow-green);
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            letter-spacing: 6px;
-            margin-bottom: 0.3rem;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 4s linear infinite;
-        }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            color: var(--gray-light);
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-        }
-        .hero-desc {
-            font-size: 1rem;
-            color: #A0C8B0;
-            max-width: 420px;
-            margin: 0 auto 28px;
-            line-height: 1.7;
-        }
-        .hero-btns {
-            display: flex;
-            gap: 14px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn {
-            padding: 14px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: var(--transition);
-            font-size: 0.95rem;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            border: none;
-        }
-        .btn-primary {
-            background: var(--green);
-            color: #fff;
-            box-shadow: var(--shadow-green);
-        }
-        .btn-primary:hover {
-            background: var(--green-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(45,138,78,0.4);
-        }
-        .btn-outline {
-            background: transparent;
-            color: #fff;
-            border: 1px solid rgba(255,255,255,0.35);
-        }
-        .btn-outline:hover {
-            border-color: var(--gold);
-            background: rgba(201,169,110,0.1);
-            transform: translateY(-3px);
-        }
-        .btn-gold {
-            background: var(--gold);
-            color: var(--green-bg);
-            box-shadow: var(--shadow-gold);
-            font-weight: 700;
-        }
-        .btn-gold:hover {
-            background: var(--gold-dark);
-            transform: translateY(-3px);
-        }
-
-        /* ============ FEATURES BAR ============ */
-        .features-bar {
-            background: var(--green-surface);
-            padding: 30px 0;
-            border-bottom: 1px solid rgba(45,138,78,0.2);
-        }
-        .features-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            padding: 0 2rem;
-            text-align: center;
-        }
-        .feature-item {
-            color: var(--gray-light);
-            font-weight: 500;
-            font-size: 0.9rem;
-            padding: 15px;
-            background: rgba(45,138,78,0.08);
-            border-radius: var(--radius);
-            border: 1px solid rgba(45,138,78,0.15);
-            transition: var(--transition);
-        }
-        .feature-item:hover {
-            border-color: var(--green-light);
-            transform: translateY(-3px);
-        }
-        .feature-item i {
-            color: var(--gold);
-            font-size: 1.6rem;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        /* ============ CONTAINER ============ */
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* ============ SECTION ============ */
-        .section {
-            padding: 80px 0;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-        .section-label {
-            font-size: 0.78rem;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-        .section-title span { color: var(--gold); }
-        .section-line {
-            width: 50px;
-            height: 3px;
-            background: var(--green);
-            margin: 0 auto;
-            border-radius: 2px;
-        }
-        .section-desc {
-            color: var(--gray);
-            max-width: 550px;
-            margin: 14px auto 0;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* ============ ABOUT SECTION ============ */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .about-image-wrapper {
-            position: relative;
-        }
-        .about-image {
-            width: 100%;
-            border-radius: var(--radius-lg);
-            border: 2px solid rgba(45,138,78,0.3);
-            transition: var(--transition);
-            box-shadow: var(--shadow-lg);
-        }
-        .about-image:hover {
-            border-color: var(--gold);
-            transform: scale(1.02);
-        }
-        .about-badge {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            background: var(--green);
-            color: #fff;
-            padding: 18px 24px;
-            border-radius: var(--radius);
-            text-align: center;
-            box-shadow: var(--shadow-xl);
-        }
-        .about-badge .number {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            line-height: 1;
-            color: var(--gold);
-        }
-        .about-badge .text {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 2px;
-        }
-        .about-content h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 16px;
-        }
-        .about-content .subtitle {
-            color: var(--green-light);
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
-        }
-        .about-content p {
-            color: var(--gray-light);
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-        .about-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 24px;
-        }
-        .about-stat {
-            background: var(--green-card);
-            padding: 16px;
-            border-radius: var(--radius);
-            text-align: center;
-            border: 1px solid rgba(45,138,78,0.2);
-        }
-        .about-stat .stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--gold);
-        }
-        .about-stat .stat-label {
-            font-size: 0.75rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* ============ MENU CATEGORIES ============ */
-        .category { margin-bottom: 3.5rem; }
-        .category-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1.2rem;
-            border-left: 5px solid var(--green);
-            padding-left: 1rem;
-            color: var(--gold);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-            gap: 1.4rem;
-        }
-        .menu-card {
-            background: var(--green-card);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid rgba(45,138,78,0.2);
-        }
-        .menu-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-            border-color: var(--green-light);
-        }
-        .card-img {
-            height: 180px;
-            width: 100%;
-            object-fit: cover;
-            background: var(--green-surface);
-            transition: var(--transition-slow);
-        }
-        .menu-card:hover .card-img { transform: scale(1.05); }
-        .card-body { padding: 1.2rem; }
-        .item-title {
-            font-weight: 700;
-            font-size: 1.05rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        .item-name { color: #E8F5EC; }
-        .item-price {
-            color: var(--gold);
-            font-weight: 800;
-            font-size: 1.1rem;
-            font-family: 'Playfair Display', serif;
-        }
-        .item-desc {
-            font-size: 0.78rem;
-            color: var(--gray);
-            margin-top: 0.4rem;
-            line-height: 1.5;
-        }
-
-        /* ============ SIMPLE LIST ============ */
-        .menu-simple {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 8px;
-        }
-        .menu-simple-item {
-            background: var(--green-card);
-            border-radius: var(--radius);
-            padding: 12px 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid rgba(45,138,78,0.2);
-            transition: var(--transition);
-        }
-        .menu-simple-item:hover {
-            border-color: var(--green-light);
-            transform: translateX(4px);
-        }
-        .menu-simple-item .name { font-weight: 600; color: #E8F5EC; font-size: 0.88rem; }
-        .menu-simple-item .price { font-weight: 700; color: var(--gold); font-size: 0.95rem; }
-
-        /* ============ RECOMMENDATIONS SECTION ============ */
-        .recommendations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 30px;
-        }
-        .rec-card {
-            background: var(--green-card);
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            text-align: center;
-            border: 1px solid rgba(45,138,78,0.2);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-        .rec-card::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 80px;
-            height: 80px;
-            background: var(--green);
-            border-radius: 50%;
-            opacity: 0.1;
-            transition: var(--transition);
-        }
-        .rec-card:hover::before {
-            transform: scale(2);
-            opacity: 0.15;
-        }
-        .rec-card:hover {
-            border-color: var(--green-light);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        .rec-card .rec-icon {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 14px;
-            position: relative;
-            z-index: 1;
-        }
-        .rec-card h4 {
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 8px;
-            position: relative;
-            z-index: 1;
-        }
-        .rec-card p {
-            font-size: 0.85rem;
-            color: var(--gray);
-            line-height: 1.5;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* ============ PAYMENT SECTION ============ */
-        .payment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .payment-card {
-            background: var(--green-card);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-            text-align: center;
-            border: 1px solid rgba(45,138,78,0.2);
-            transition: var(--transition);
-        }
-        .payment-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-        .payment-card i {
-            font-size: 2.2rem;
-            color: var(--gold);
-            margin-bottom: 12px;
-            display: block;
-        }
-        .payment-card h4 { font-size: 1.1rem; color: #fff; margin-bottom: 8px; }
-        .payment-detail {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            color: var(--gold);
-            font-weight: 700;
-            word-break: break-all;
-        }
-        .payment-label {
-            font-size: 0.72rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 4px;
-        }
-
-        /* ============ CONTACT ============ */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 40px;
-            background: var(--green-surface);
-            border-radius: var(--radius-xl);
-            padding: 50px;
-            border: 1px solid rgba(45,138,78,0.3);
-        }
-        .contact-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            margin-bottom: 18px;
-        }
-        .contact-info-icon {
-            width: 44px;
-            height: 44px;
-            background: rgba(45,138,78,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: var(--gold);
-            font-size: 1rem;
-        }
-        .contact-info-text h4 { color: #fff; font-size: 0.95rem; margin-bottom: 2px; }
-        .contact-info-text p { color: var(--gray-light); font-size: 0.85rem; }
-        .social-icons {
-            display: flex;
-            gap: 12px;
-            margin-top: 22px;
-        }
-        .social-icons a {
-            width: 42px;
-            height: 42px;
-            background: rgba(45,138,78,0.15);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold);
-            font-size: 1.1rem;
-            transition: var(--transition);
-            text-decoration: none;
-            border: 1px solid rgba(45,138,78,0.3);
-        }
-        .social-icons a:hover {
-            background: var(--green);
-            color: #fff;
-            border-color: var(--green);
-            transform: translateY(-3px);
-        }
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            width: 100%;
-            padding: 14px 16px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(45,138,78,0.3);
-            border-radius: var(--radius-sm);
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            margin-bottom: 14px;
-            transition: var(--transition);
-        }
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(201,169,110,0.08);
-        }
-        .contact-form select { color: #fff; }
-        .contact-form select option { background: var(--green-bg); color: #fff; }
-        .contact-form textarea { resize: vertical; min-height: 110px; }
-        .contact-form button {
-            width: 100%;
-            padding: 14px;
-            background: var(--green);
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.5px;
-        }
-        .contact-form button:hover {
-            background: var(--green-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-green);
-        }
-
-        /* ============ MAP PLACEHOLDER ============ */
-        .map-placeholder {
-            background: var(--green-card);
-            border-radius: var(--radius-lg);
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(45,138,78,0.3);
-            margin-top: 30px;
-            color: var(--gray);
-            font-size: 1rem;
-        }
-        .map-placeholder i { color: var(--gold); margin-right: 8px; font-size: 1.3rem; }
-
-        /* ============ FOOTER ============ */
-        .footer {
-            background: #051A0D;
-            color: var(--gray);
-            padding: 3rem 2rem 2rem;
-            border-top: 1px solid rgba(45,138,78,0.2);
-        }
-        .footer-grid {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 35px;
-            margin-bottom: 30px;
-        }
-        .footer-col h4 {
-            font-size: 1rem;
-            color: #fff;
-            margin-bottom: 16px;
-            font-weight: 600;
-        }
-        .footer-col p, .footer-col a {
-            display: block;
-            color: var(--gray);
-            font-size: 0.85rem;
-            line-height: 1.8;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        .footer-col a:hover { color: var(--gold); padding-left: 4px; }
-        .footer-bottom {
-            max-width: 1300px;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 25px;
-            border-top: 1px solid rgba(45,138,78,0.15);
-            font-size: 0.82rem;
-            color: var(--gray);
-        }
-        .footer-credit { margin-top: 8px; font-size: 0.75rem; color: #5A8A6A; }
-        .footer-credit a {
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        .footer-credit a:hover { color: var(--green-light); }
-
-        /* ============ RESPONSIVE ============ */
-        @media (max-width: 900px) {
-            .about-grid { grid-template-columns: 1fr; gap: 35px; }
-            .about-badge { bottom: -10px; right: -10px; padding: 12px 18px; }
-            .about-badge .number { font-size: 1.5rem; }
-            .contact-grid { grid-template-columns: 1fr; padding: 30px 22px; }
-            .section-title { font-size: 2rem; }
-        }
-        @media (max-width: 768px) {
-            .hero { min-height: 70vh; }
-            .hero h1 { font-size: 2.5rem; letter-spacing: 3px; }
-            .hero-content { padding: 2rem 1.2rem; }
-            .nav-inner { flex-direction: column; gap: 10px; }
-            .nav-links { gap: 1rem; }
-            .mobile-menu-btn { display: block; }
-            .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; padding-top: 10px; }
-            .nav-links.show { display: flex; }
-            .features-grid { grid-template-columns: repeat(2, 1fr); }
-            .section { padding: 50px 0; }
-        }
-        @media (min-width: 769px) {
-            .nav-links { display: flex !important; }
-        }
-        @media (max-width: 480px) {
-            .container { padding: 0 1rem; }
-            .hero h1 { font-size: 2rem; }
-            .menu-grid { grid-template-columns: 1fr; }
-            .about-stats { grid-template-columns: 1fr; }
-            .section-title { font-size: 1.6rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -904,38 +23,33 @@
 <!-- ============ NAVIGATION ============ -->
 <header class="nav-bar">
     <div class="nav-inner">
-        <a href="#home" class="logo">
+        <a href="index.html" class="logo">
             <div class="logo-icon">🍽️</div>
-            <div class="logo-text">
-                NATE
-                <span>CAFÉ & RESTAURANT</span>
-            </div>
+            <div class="logo-text">NATE<span>CAFÉ & RESTAURANT</span></div>
         </a>
         <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
             <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#recommendations">Why Us</a></li>
-            <li><a href="#payment">Payment</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact" class="nav-cta-btn">Reserve a Table</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta-btn">Reserve a Table</a></li>
         </ul>
     </div>
 </header>
 
 <!-- ============ HERO ============ -->
-<section id="home" class="hero">
+<section class="hero">
     <div class="hero-content">
-        <div class="hero-badge">✦ Established in Addis Ababa ✦</div>
+        <div class="hero-badge">✦ Addis Ababa ✦</div>
         <h1>NATE</h1>
         <p class="hero-subtitle">Café & Restaurant</p>
         <p class="hero-desc">Where every meal is a celebration of flavor — premium dining, fresh ingredients, and unforgettable moments</p>
         <div class="hero-btns">
-            <a href="#menu" class="btn btn-primary"><i class="fas fa-utensils"></i> Explore Menu</a>
-            <a href="#contact" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Reserve a Table</a>
+            <a href="about.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> Learn More</a>
+            <a href="contact.html" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Reserve a Table</a>
         </div>
     </div>
 </section>
@@ -951,130 +65,79 @@
     </div>
 </div>
 
-<!-- ============ ABOUT SECTION ============ -->
+<!-- ============ WELCOME SECTION ============ -->
 <div class="container">
-    <section id="about" class="section">
+    <section class="section">
         <div class="section-header reveal">
-            <div class="section-label">Our Story</div>
-            <h2 class="section-title">About <span>Nate Café</span></h2>
+            <div class="section-label">Welcome</div>
+            <h2 class="section-title">The <span>Nate</span> Experience</h2>
             <div class="section-line"></div>
-            <p class="section-desc">Discover the passion behind every dish we serve</p>
+            <p class="section-desc">Discover what makes dining at Nate Café truly special</p>
         </div>
+        <div class="highlights-grid">
+            <div class="highlight-card reveal">
+                <i class="fas fa-utensils"></i>
+                <h4>Exceptional Cuisine</h4>
+                <p>From traditional Ethiopian dishes to international favorites, every plate is crafted with passion and the freshest ingredients.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-mug-hot"></i>
+                <h4>Artisan Coffee</h4>
+                <p>Expertly brewed Ethiopian coffee — from classic macchiatos to specialty lattes made with love and precision.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-glass-cheers"></i>
+                <h4>Signature Mocktails</h4>
+                <p>Refreshing, handcrafted alcohol-free cocktails that elevate any meal or celebration.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-calendar-check"></i>
+                <h4>Event Hosting</h4>
+                <p>Birthdays, anniversaries, corporate gatherings — let us make your special moments unforgettable.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-truck"></i>
+                <h4>Delivery Available</h4>
+                <p>Enjoy Nate Café from the comfort of your home. Fast and reliable delivery across Addis Ababa.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-heart"></i>
+                <h4>Made with Love</h4>
+                <p>Every dish, every drink, every moment at Nate is infused with care and Ethiopian hospitality.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ ABOUT PREVIEW ============ -->
+<div class="container">
+    <section class="section">
         <div class="about-grid">
             <div class="about-image-wrapper reveal">
-                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=80" alt="Nate Café Restaurant Interior" class="about-image" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=80" alt="Nate Café Interior" class="about-image" loading="lazy">
                 <div class="about-badge">
                     <div class="number">5+</div>
                     <div class="text">Years of<br>Excellence</div>
                 </div>
             </div>
             <div class="about-content reveal">
-                <h3>A Taste of Excellence</h3>
+                <h3>Our Story</h3>
                 <div class="subtitle">Premium Dining in Addis Ababa</div>
                 <p>Welcome to <strong>Nate Café & Restaurant</strong>, where culinary artistry meets Ethiopian hospitality. We bring together the finest local ingredients and international techniques to create dishes that delight the senses.</p>
-                <p>From sunrise breakfasts to evening mocktails, every moment at Nate is crafted with care. Our chefs combine traditional Ethiopian flavors with global cuisine to offer a menu that's both familiar and exciting.</p>
-                <div class="about-stats">
-                    <div class="about-stat">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Menu Items</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Fresh Ingredients</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="stat-number">4.8</div>
-                        <div class="stat-label">Customer Rating</div>
-                    </div>
-                    <div class="about-stat">
-                        <div class="stat-number">7 Days</div>
-                        <div class="stat-label">Open Weekly</div>
-                    </div>
-                </div>
+                <p>From sunrise breakfasts to evening mocktails, every moment at Nate is crafted with care.</p>
+                <a href="about.html" class="btn btn-primary" style="margin-top:10px;"><i class="fas fa-arrow-right"></i> Read More About Us</a>
             </div>
         </div>
     </section>
 </div>
 
-<!-- ============ MENU SECTION ============ -->
+<!-- ============ PAYMENT PREVIEW ============ -->
 <div class="container">
-    <section id="menu" class="section">
-        <div class="section-header reveal">
-            <div class="section-label">Our Menu</div>
-            <h2 class="section-title">Delicious <span>Selections</span></h2>
-            <div class="section-line"></div>
-            <p class="section-desc">Explore our carefully crafted menu — from breakfast to dinner</p>
-        </div>
-
-        <div id="breakfast" class="category"><div class="category-title reveal">🍳 Breakfast</div><div class="menu-grid" id="breakfast-grid"></div></div>
-        <div id="traditional" class="category"><div class="category-title reveal">🥘 Traditional Foods</div><div class="menu-grid" id="traditional-grid"></div></div>
-        <div id="pizza" class="category"><div class="category-title reveal">🍕 Pizza</div><div class="menu-grid" id="pizza-grid"></div></div>
-        <div id="burgers" class="category"><div class="category-title reveal">🍔 Burgers <span style="font-size:0.8rem;color:var(--gray);">(All served with fries)</span></div><div class="menu-grid" id="burgers-grid"></div></div>
-        <div id="wraps" class="category"><div class="category-title reveal">🌯 Wraps</div><div class="menu-simple" id="wraps-grid"></div></div>
-        <div id="salads" class="category"><div class="category-title reveal">🥗 Salads</div><div class="menu-grid" id="salads-grid"></div></div>
-        <div id="drinks" class="category"><div class="category-title reveal">🥤 Hot Drinks</div><div class="menu-simple" id="hotdrinks-grid"></div></div>
-        <div class="category"><div class="category-title reveal">🧊 Cold Drinks</div><div class="menu-simple" id="colddrinks-grid"></div></div>
-        <div class="category"><div class="category-title reveal">🧃 Fresh Juice</div><div class="menu-simple" id="juice-grid"></div></div>
-        <div class="category"><div class="category-title reveal">🍟 Snacks</div><div class="menu-simple" id="snacks-grid"></div></div>
-        <div id="desserts" class="category"><div class="category-title reveal">🍰 Desserts</div><div class="menu-simple" id="desserts-grid"></div></div>
-        <div class="category"><div class="category-title reveal">➕ Extras</div><div class="menu-simple" id="extras-grid"></div></div>
-        <div id="mocktails" class="category"><div class="category-title reveal">🍹 Mocktails</div><div class="menu-grid" id="mocktails-grid"></div></div>
-        <div class="category"><div class="category-title reveal">📦 Takeaway Box</div><div class="menu-simple" id="takeaway-grid"></div></div>
-    </section>
-</div>
-
-<!-- ============ RECOMMENDATIONS SECTION ============ -->
-<div class="container">
-    <section id="recommendations" class="section">
-        <div class="section-header reveal">
-            <div class="section-label">Why Choose Us</div>
-            <h2 class="section-title">The <span>Nate</span> Experience</h2>
-            <div class="section-line"></div>
-            <p class="section-desc">What makes dining at Nate Café special</p>
-        </div>
-        <div class="recommendations-grid">
-            <div class="rec-card reveal">
-                <div class="rec-icon"><i class="fas fa-seedling"></i></div>
-                <h4>Farm to Table</h4>
-                <p>We source the freshest local ingredients daily to ensure every dish bursts with authentic flavor.</p>
-            </div>
-            <div class="rec-card reveal">
-                <div class="rec-icon"><i class="fas fa-mug-hot"></i></div>
-                <h4>Artisan Coffee</h4>
-                <p>Expertly brewed Ethiopian coffee, from classic macchiatos to specialty lattes made with love.</p>
-            </div>
-            <div class="rec-card reveal">
-                <div class="rec-icon"><i class="fas fa-glass-cheers"></i></div>
-                <h4>Signature Mocktails</h4>
-                <p>Refreshing, handcrafted alcohol-free cocktails that elevate any meal or gathering.</p>
-            </div>
-            <div class="rec-card reveal">
-                <div class="rec-icon"><i class="fas fa-pizza-slice"></i></div>
-                <h4>Artisan Pizza</h4>
-                <p>Wood-fired pizzas with premium toppings — from classic Margareta to our famous Nate All Season.</p>
-            </div>
-            <div class="rec-card reveal">
-                <div class="rec-icon"><i class="fas fa-calendar-check"></i></div>
-                <h4>Event Hosting</h4>
-                <p>Birthdays, anniversaries, corporate gatherings — let us make your special moments unforgettable.</p>
-            </div>
-            <div class="rec-card reveal">
-                <div class="rec-icon"><i class="fas fa-truck"></i></div>
-                <h4>Delivery Available</h4>
-                <p>Enjoy Nate Café from the comfort of your home. Fast delivery across Addis Ababa.</p>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- ============ PAYMENT SECTION ============ -->
-<div class="container">
-    <section id="payment" class="section">
+    <section class="section">
         <div class="section-header reveal">
             <div class="section-label">Easy Payment</div>
             <h2 class="section-title">Payment <span>Methods</span></h2>
             <div class="section-line"></div>
-            <p class="section-desc">Choose your preferred way to pay</p>
         </div>
         <div class="payment-grid">
             <div class="payment-card reveal">
@@ -1099,71 +162,13 @@
     </section>
 </div>
 
-<!-- ============ CONTACT SECTION ============ -->
+<!-- ============ CTA SECTION ============ -->
 <div class="container">
-    <section id="contact" class="section">
-        <div class="section-header reveal">
-            <div class="section-label">Get In Touch</div>
-            <h2 class="section-title">Contact <span>Us</span></h2>
-            <div class="section-line"></div>
-            <p class="section-desc">We'd love to hear from you — reservations, inquiries, or feedback</p>
-        </div>
-        <div class="contact-grid reveal">
-            <div class="contact-info">
-                <h3>Nate Café & Restaurant</h3>
-                <div class="contact-info-item">
-                    <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="contact-info-text">
-                        <h4>Address</h4>
-                        <p>Addis Ababa, Ethiopia</p>
-                    </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
-                    <div class="contact-info-text">
-                        <h4>Phone</h4>
-                        <p>+251 000 000 000</p>
-                    </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-                    <div class="contact-info-text">
-                        <h4>Email</h4>
-                        <p>natecafe@email.com</p>
-                    </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
-                    <div class="contact-info-text">
-                        <h4>Hours</h4>
-                        <p>Open Daily: 7:00 AM - 11:00 PM</p>
-                    </div>
-                </div>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="contact-form">
-                <input type="text" placeholder="Your Name *" id="contactName" required>
-                <input type="email" placeholder="Email Address *" id="contactEmail" required>
-                <input type="tel" placeholder="Phone Number" id="contactPhone">
-                <select id="contactSubject">
-                    <option value="">Select Subject</option>
-                    <option value="reservation">Table Reservation</option>
-                    <option value="order">Place an Order</option>
-                    <option value="event">Event Inquiry</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="other">Other</option>
-                </select>
-                <textarea placeholder="Your Message *" id="contactMessage" required></textarea>
-                <button onclick="submitContact()"><i class="fas fa-paper-plane"></i> Send Message</button>
-            </div>
-        </div>
-        <div class="map-placeholder reveal">
-            <i class="fas fa-map-marked-alt"></i> 📍 Addis Ababa, Ethiopia — Find us on Google Maps
+    <section class="section" style="text-align:center;">
+        <div class="reveal">
+            <h2 class="section-title">Ready to <span>Experience</span> Nate?</h2>
+            <p class="section-desc" style="margin-bottom:24px;">Reserve your table today and discover why Nate Café is Addis Ababa's favorite dining destination.</p>
+            <a href="contact.html" class="btn btn-gold"><i class="fas fa-calendar-check"></i> Reserve a Table Now</a>
         </div>
     </section>
 </div>
@@ -1177,228 +182,26 @@
         </div>
         <div class="footer-col">
             <h4>Quick Links</h4>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#menu">Menu</a>
-            <a href="#recommendations">Why Us</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="footer-col">
-            <h4>Our Menu</h4>
-            <a href="#breakfast">Breakfast</a>
-            <a href="#pizza">Pizza</a>
-            <a href="#burgers">Burgers</a>
-            <a href="#mocktails">Mocktails</a>
-            <a href="#desserts">Desserts</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="why-us.html">Why Us</a>
+            <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
             <h4>Contact</h4>
             <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
             <p><i class="fas fa-phone"></i> +251 000 000 000</p>
             <p><i class="fas fa-envelope"></i> natecafe@email.com</p>
-            <p><i class="fas fa-mobile-alt"></i> Telebirr: [Merchant ID]</p>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 Nate Café & Restaurant. All rights reserved. | Premium Dining in Addis Ababa</p>
+        <p>&copy; 2026 Nate Café & Restaurant. All rights reserved.</p>
         <p class="footer-credit">
-            Designed & Developed by 
-            <a href="https://addispower.pages.dev" target="_blank" rel="noopener">
-                <i class="fas fa-bolt"></i> AddisPower <i class="fas fa-bolt"></i>
-            </a>
+            Designed & Developed by <a href="https://addispower.pages.dev" target="_blank" rel="noopener"><i class="fas fa-bolt"></i> AddisPower</a>
         </p>
     </div>
 </footer>
 
-<script>
-    // ========== SCROLL REVEAL ==========
-    const revealElements = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    revealElements.forEach(el => observer.observe(el));
-
-    // ========== MENU DATA ==========
-    const imageMap = {
-        breakfast: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=300',
-        traditional: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=300',
-        pizza: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300',
-        burger: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300',
-        wrap: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300',
-        salad: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300',
-        mocktail: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=300',
-        default: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300'
-    };
-
-    const breakfastItems = [
-        {name:'Oats',desc:'Oats, raisin, peanut, strawberry'},
-        {name:'Pancake',desc:'Pancake, syrup, banana, strawberry'},
-        {name:'Scrambled Egg',desc:'Egg, tomato, onion, green chili or plain'},
-        {name:'Omelet with Cheese or Plain',desc:'Egg, vegetable, cheese'},
-        {name:'Special Chechebsa',desc:'Teff pitta bread, egg, honey, yoghurt, avocado'},
-        {name:'Chechebesa Fasting',desc:'Teff pitta bread, avocado, honey'},
-        {name:'Avocado Toast',desc:'Toasted bread, avocado, egg, fruit'},
-        {name:'Croissant Egg Sandwich',desc:'Croissant, egg, cheese, beef slice, chicken slice, avocado, pesto sauce'},
-        {name:'Ful',desc:'Bean, chili, onion, bread, avocado'},
-        {name:'Special Ful',desc:'Bean, chili, onion, bread, yoghurt, egg, avocado'},
-        {name:'Egg Sandwich',desc:'Bread, egg, onion, tomato, chili, mayonnaise, fries'}
-    ];
-    renderCards('breakfast-grid', breakfastItems, 'breakfast');
-
-    const traditionalItems = [
-        {name:'Shiro Tegabino',desc:'Classic Ethiopian chickpea stew'},
-        {name:'Misir Wet',desc:'Spiced red lentil stew'},
-        {name:'Timatim Lebleb',desc:'Fresh tomato salad'},
-        {name:'Gomen Kitfo',desc:'Minced kale with spices'},
-        {name:'Timatim Kurt with Avocado',desc:'Tomato salad with avocado'},
-        {name:'Fasting Combo',desc:'Spaghetti/Macaroni/Rice with sauces: Tomato, Vegetable, Pesto, Arrabiata'}
-    ];
-    renderCards('traditional-grid', traditionalItems, 'traditional');
-
-    const pizzaItems = [
-        {name:'Margareta',desc:'Tomato sauce, mozzarella, basil'},
-        {name:'Pepperoni',desc:'+ pepperoni, oregano, black olive'},
-        {name:'Meat Lovers',desc:'Beef slice, sausage, black olive, oregano, chili sauce'},
-        {name:'Sea Food',desc:'Fish tuna, black olive, oregano, chili flakes'},
-        {name:'Veggie Lovers',desc:'All cooked veg, black olive, oregano, chili sauce'},
-        {name:'Chicken',desc:'Chicken, black olive, basil, oregano, chili sauce'},
-        {name:'Nate All Season',desc:'Beef slice, chicken, sausage, fish, black olive, basil, oregano'}
-    ];
-    renderCards('pizza-grid', pizzaItems, 'pizza');
-
-    const burgerItems = [
-        {name:'Nate',desc:'Beef patty, homemade sauce'},
-        {name:'Double Nate',desc:'Double beef patty, double cheese, double beef slice'},
-        {name:'BBQ Road',desc:'Beef patty, cheese, beef slice'},
-        {name:'Chicken',desc:'Chicken, beef patty, cheese'},
-        {name:'Cheese',desc:'Beef patty, cheese'},
-        {name:'Nate King',desc:'Beef patty, chicken, cheese, chicken slice'}
-    ];
-    renderCards('burgers-grid', burgerItems, 'burger');
-
-    const wrapItems = [
-        {name:'Avocado',price:'600'},{name:'Vegetable',price:'400'},
-        {name:'Grilled Beef Sausage',price:'980'},{name:'Chicken',price:'1,050'},
-        {name:'Tuna',price:'1,200'}
-    ];
-    renderSimple('wraps-grid', wrapItems);
-
-    const saladItems = [
-        {name:'Avocado Salad',desc:'Avocado, lettuce, onion, tomato, cucumber, sweet corn, pepper, carrot, bread, homemade dressing'},
-        {name:'Chicken Caesar',desc:'Chicken, lettuce, cucumber, onion, tomato, parmesan, olive oil, sweet corn'},
-        {name:'Tuna Salad',desc:'Tuna, lettuce, cucumber, onion, carrot, tomato, pepper, bread, lemon dressing'},
-        {name:'Mediterranean',desc:'Cucumber, onion, pepper, parsley, tomato, chickpeas, black olive, oregano, olive oil, balsamic vinegar'}
-    ];
-    renderCards('salads-grid', saladItems, 'salad');
-
-    const hotDrinks = [
-        {name:'Macchiato',price:'130'},{name:'Espresso',price:'120'},{name:'Normal Coffee',price:'130'},
-        {name:'Americano',price:'150'},{name:'Cappuccino',price:'230'},{name:'Mocha',price:'300'},
-        {name:'Hot Chocolate',price:'320'},{name:'Cafe Latte',price:'230'},{name:'Caramel Macchiato',price:'180'},
-        {name:'Black Tea',price:'90'},{name:'Ginger Tea',price:'120'},{name:'Special Tea',price:'290'},
-        {name:'Espresso Tea (Spri)',price:'100'},{name:'Fasting Macchiato',price:'250'},{name:'Double Macchiato',price:'180'},
-        {name:'Ginger with Coffee',price:'105'},{name:'Green Tea',price:'120'},{name:'Mocha Latte',price:'300'},
-        {name:'Lemon Tea',price:'105'}
-    ];
-    renderSimple('hotdrinks-grid', hotDrinks);
-
-    const coldDrinks = [
-        {name:'Iced Americano',price:'170'},{name:'Iced Mocha',price:'350'},
-        {name:'Iced Caramel Latte',price:'350'},{name:'Iced Latte',price:'260'},{name:'Iced Tea',price:'180'}
-    ];
-    renderSimple('colddrinks-grid', coldDrinks);
-
-    const juices = [
-        {name:'Avocado',price:'350'},{name:'Orange',price:'350'},{name:'Papaya',price:'250'},
-        {name:'Strawberry',price:'300'},{name:'Pineapple',price:'320'},{name:'Cocktail Mango',price:'350'}
-    ];
-    renderSimple('juice-grid', juices);
-
-    const snacks = [
-        {name:'Sambusa with Fries',price:'300'},{name:'Veg/Lentil Rice Spring roll with Fries',price:'300'},
-        {name:'Veg/Lentil Rice Fries',price:'250'}
-    ];
-    renderSimple('snacks-grid', snacks);
-
-    const desserts = [
-        {name:'English Cake',price:'150'},{name:'Banana Cake',price:'130'},{name:'Custard',price:'130'},
-        {name:'Brownie',price:'100'},{name:'Croissant',price:'150'},{name:'Cream Cake',price:'150'},
-        {name:'Mille-feuille',price:'150'}
-    ];
-    renderSimple('desserts-grid', desserts);
-
-    const extras = [
-        {name:'Ketchup',price:'80'},{name:'Mayonnaise',price:'80'},{name:'Bread',price:'30'},
-        {name:'Injera',price:'30'},{name:'Tuna Cheese',price:'150'}
-    ];
-    renderSimple('extras-grid', extras);
-
-    const mocktailItems = [
-        {name:'Virgin Mojito',desc:'Lemon, mint, syrup, soda'},
-        {name:'Strawberry Basil Mash',desc:'Strawberry, lemon, basil, syrup, soda'},
-        {name:'Eastern',desc:'Hibiscus, lemon, ginger, syrup, soda'},
-        {name:'Orange Thyme',desc:'Orange, thyme syrup, lemon, syrup, soda'},
-        {name:'Watermelon Lemonade',desc:'Watermelon, ginger, syrup, soda'},
-        {name:'Cucumber Mash',desc:'Cucumber, syrup, lemon, tonic water'},
-        {name:'Ginger Spicy',desc:'Ginger, spicy syrup, lemon, syrup, soda'},
-        {name:'Nate Special',desc:'Orange, carrot, lemon, spicy syrup, syrup'},
-        {name:'Sunset',desc:'Orange, watermelon, syrup, soda'}
-    ];
-    renderCards('mocktails-grid', mocktailItems, 'mocktail');
-
-    const takeaway = [
-        {name:'Juice',price:'70'},{name:'Hot Drink',price:'50'},
-        {name:'Foil',price:'50'},{name:'Pizza',price:'100'}
-    ];
-    renderSimple('takeaway-grid', takeaway);
-
-    function renderCards(gridId, items, imageKey) {
-        const grid = document.getElementById(gridId);
-        if (!grid) return;
-        const img = imageMap[imageKey] || imageMap.default;
-        grid.innerHTML = items.map(item => `
-            <div class="menu-card reveal">
-                <img class="card-img" src="${img}" alt="${item.name}" loading="lazy">
-                <div class="card-body">
-                    <div class="item-title">
-                        <span class="item-name">${item.name}</span>
-                        ${item.price ? `<span class="item-price">${item.price} ETB</span>` : ''}
-                    </div>
-                    <div class="item-desc">${item.desc}</div>
-                </div>
-            </div>
-        `).join('');
-    }
-
-    function renderSimple(gridId, items) {
-        const grid = document.getElementById(gridId);
-        if (!grid) return;
-        grid.innerHTML = items.map(item => `
-            <div class="menu-simple-item reveal">
-                <span class="name">${item.name}</span>
-                <span class="price">${item.price} ETB</span>
-            </div>
-        `).join('');
-    }
-
-    function submitContact() {
-        const name = document.getElementById('contactName').value.trim();
-        const email = document.getElementById('contactEmail').value.trim();
-        const message = document.getElementById('contactMessage').value.trim();
-        if (!name || !email || !message) {
-            alert('Please fill in Name, Email, and Message fields.');
-            return;
-        }
-        const subject = document.getElementById('contactSubject').value || 'General Inquiry';
-        alert(`✅ Thank you, ${name}!\n\nYour ${subject} has been received. We'll get back to you within 24 hours.`);
-        document.querySelectorAll('.contact-form input, .contact-form textarea, .contact-form select').forEach(el => el.value = '');
-    }
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
