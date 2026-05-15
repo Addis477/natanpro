@@ -1,49 +1,244 @@
-// ============ MOBILE SIDE NAVIGATION ============
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const sideNav = document.getElementById('mobileSideNav');
-    const closeBtn = document.getElementById('closeSideNav');
-    const overlay = document.getElementById('sideNavOverlay');
-    
-    // Function to open menu
-    function openMenu() {
-        sideNav.classList.add('open');
-        overlay.classList.add('active');
-        document.body.classList.add('menu-open');
-    }
-    
-    // Function to close menu
-    function closeMenu() {
-        sideNav.classList.remove('open');
-        overlay.classList.remove('active');
-        document.body.classList.remove('menu-open');
-    }
-    
-    // Toggle menu on hamburger click
-    if (menuToggle) {
-        menuToggle.addEventListener('click', openMenu);
-    }
-    
-    // Close menu on close button
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeMenu);
-    }
-    
-    // Close menu on overlay click
-    if (overlay) {
-        overlay.addEventListener('click', closeMenu);
-    }
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && sideNav.classList.contains('open')) {
-            closeMenu();
-        }
-    });
-    
-    // Close menu when a link is clicked (optional)
-    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate Café & Restaurant | Addis Ababa | Home</title>
+    <meta name="description" content="Nate Café & Restaurant - Premium dining in Addis Ababa. Fresh ingredients, bold flavors, unforgettable moments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+    <div><i class="fas fa-clock"></i> Open Daily: <span>7:00 AM - 11:00 PM</span></div>
+    <div><i class="fas fa-map-marker-alt"></i> <span>Addis Ababa, Ethiopia</span></div>
+    <div><i class="fas fa-phone"></i> <span>+251 911 116 130</span></div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-bar">
+    <div class="nav-inner">
+        <a href="index.html" class="logo">
+            <img src="https://raw.githubusercontent.com/Addis477/natanpro/c1625dba577af6493216bf3a9a806fe73b8cf582/logo.jpg" alt="Nate Café Logo" class="logo-img">
+            <div class="logo-text">NATE<span>CAFÉ & RESTAURANT</span></div>
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="menuToggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Desktop Navigation -->
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta-btn">Reserve a Table</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- ============ MOBILE SIDE NAVIGATION ============ -->
+<div class="mobile-side-nav" id="mobileSideNav">
+    <div class="mobile-side-header">
+        <div class="mobile-logo">
+            <img src="https://raw.githubusercontent.com/Addis477/natanpro/c1625dba577af6493216bf3a9a806fe73b8cf582/logo.jpg" alt="Logo" class="mobile-logo-img">
+            <span>Nate Café</span>
+        </div>
+        <button class="close-side-nav" id="closeSideNav">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">🏠 Home</a></li>
+        <li><a href="about.html">📖 About</a></li>
+        <li><a href="why-us.html">⭐ Why Us</a></li>
+        <li><a href="gallery.html">🖼️ Gallery</a></li>
+        <li><a href="events.html">🎉 Events</a></li>
+        <li><a href="testimonials.html">💬 Reviews</a></li>
+        <li><a href="contact.html">📞 Contact</a></li>
+        <li><a href="contact.html" class="mobile-cta-btn">🍽️ Reserve a Table</a></li>
+    </ul>
+    <div class="mobile-side-footer">
+        <p><i class="fas fa-phone"></i> +251 911 116 130</p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/251911116130" target="_blank">WhatsApp</a></p>
+        <p><i class="fab fa-telegram"></i> <a href="https://t.me/251911116130" target="_blank">Telegram</a></p>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div class="side-nav-overlay" id="sideNavOverlay"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">✦ Addis Ababa ✦</div>
+        <h1>NATE</h1>
+        <p class="hero-subtitle">Café & Restaurant</p>
+        <p class="hero-desc">Where every meal is a celebration of flavor — premium dining, fresh ingredients, and unforgettable moments</p>
+        <div class="hero-btns">
+            <a href="about.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> Learn More</a>
+            <a href="contact.html" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Reserve a Table</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FEATURES BAR ============ -->
+<div class="features-bar">
+    <div class="features-grid">
+        <div class="feature-item"><i class="fas fa-leaf"></i> Fresh Ingredients Daily</div>
+        <div class="feature-item"><i class="fas fa-star"></i> Premium Quality</div>
+        <div class="feature-item"><i class="fas fa-users"></i> Family Friendly</div>
+        <div class="feature-item"><i class="fas fa-wifi"></i> Free WiFi</div>
+        <div class="feature-item"><i class="fas fa-car"></i> Parking Available</div>
+    </div>
+</div>
+
+<!-- ============ WELCOME SECTION ============ -->
+<div class="container">
+    <section class="section">
+        <div class="section-header reveal">
+            <div class="section-label">Welcome</div>
+            <h2 class="section-title">The <span>Nate</span> Experience</h2>
+            <div class="section-line"></div>
+            <p class="section-desc">Discover what makes dining at Nate Café truly special</p>
+        </div>
+        <div class="highlights-grid">
+            <div class="highlight-card reveal">
+                <i class="fas fa-utensils"></i>
+                <h4>Exceptional Cuisine</h4>
+                <p>From traditional Ethiopian dishes to international favorites, every plate is crafted with passion and the freshest ingredients.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-mug-hot"></i>
+                <h4>Artisan Coffee</h4>
+                <p>Expertly brewed Ethiopian coffee — from classic macchiatos to specialty lattes made with love and precision.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-glass-cheers"></i>
+                <h4>Signature Mocktails</h4>
+                <p>Refreshing, handcrafted alcohol-free cocktails that elevate any meal or celebration.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-calendar-check"></i>
+                <h4>Event Hosting</h4>
+                <p>Birthdays, anniversaries, corporate gatherings — let us make your special moments unforgettable.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-truck"></i>
+                <h4>Delivery Available</h4>
+                <p>Enjoy Nate Café from the comfort of your home. Fast and reliable delivery across Addis Ababa.</p>
+            </div>
+            <div class="highlight-card reveal">
+                <i class="fas fa-heart"></i>
+                <h4>Made with Love</h4>
+                <p>Every dish, every drink, every moment at Nate is infused with care and Ethiopian hospitality.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ ABOUT PREVIEW ============ -->
+<div class="container">
+    <section class="section">
+        <div class="about-grid">
+            <div class="about-image-wrapper reveal">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?w=800&q=80" alt="Nate Café Interior" class="about-image" loading="lazy">
+                <div class="about-badge">
+                    <div class="number">5+</div>
+                    <div class="text">Years of<br>Excellence</div>
+                </div>
+            </div>
+            <div class="about-content reveal">
+                <h3>Our Story</h3>
+                <div class="subtitle">Premium Dining in Addis Ababa</div>
+                <p>Welcome to <strong>Nate Café & Restaurant</strong>, where culinary artistry meets Ethiopian hospitality. We bring together the finest local ingredients and international techniques to create dishes that delight the senses.</p>
+                <p>From sunrise breakfasts to evening mocktails, every moment at Nate is crafted with care.</p>
+                <a href="about.html" class="btn btn-primary" style="margin-top:10px;"><i class="fas fa-arrow-right"></i> Read More About Us</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ PAYMENT PREVIEW ============ -->
+<div class="container">
+    <section class="section">
+        <div class="section-header reveal">
+            <div class="section-label">Easy Payment</div>
+            <h2 class="section-title">Payment <span>Methods</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="payment-grid">
+            <div class="payment-card reveal">
+                <i class="fas fa-cash-register"></i>
+                <h4>Cash</h4>
+                <div class="payment-detail">Available</div>
+                <div class="payment-label">Pay at the restaurant</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ CTA SECTION ============ -->
+<div class="container">
+    <section class="section" style="text-align:center;">
+        <div class="reveal">
+            <h2 class="section-title">Ready to <span>Experience</span> Nate?</h2>
+            <p class="section-desc" style="margin-bottom:24px;">Reserve your table today and discover why Nate Café is Addis Ababa's favorite dining destination.</p>
+            <a href="contact.html" class="btn btn-gold"><i class="fas fa-calendar-check"></i> Reserve a Table Now</a>
+        </div>
+    </section>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Nate Café & Restaurant</h4>
+            <p>Premium dining in the heart of Addis Ababa. Fresh ingredients, bold flavors, unforgettable moments.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="why-us.html">Why Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="testimonials.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+            <p><i class="fas fa-phone"></i> +251 911 116 130</p>
+            <p><i class="fas fa-envelope"></i> natecafe@email.com</p>
+            <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/251911116130" target="_blank" style="color:var(--gold);">WhatsApp: +251 911 116 130</a></p>
+            <p><i class="fab fa-telegram"></i> <a href="https://t.me/251911116130" target="_blank" style="color:var(--gold);">Telegram: +251 911 116 130</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Nate Café & Restaurant. All rights reserved. | Premium Dining in Addis Ababa</p>
+        <p class="footer-credit">
+            Designed & Developed by <a href="https://addispower.pages.dev" target="_blank" rel="noopener"><i class="fas fa-bolt"></i> AddisPower</a>
+        </p>
+    </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a href="https://wa.me/251911116130" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<div class="whatsapp-tooltip">Chat with us!</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
