@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Nate Café | Reservations & Inquiries | Addis Ababa</title>
+    <meta name="description" content="Get in touch with Nate Café & Restaurant. Reserve a table, place an order, or send us your feedback. We'd love to hear from you!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+    <div><i class="fas fa-clock"></i> Open Daily: <span>7:00 AM - 11:00 PM</span></div>
+    <div><i class="fas fa-map-marker-alt"></i> <span>Addis Ababa, Ethiopia</span></div>
+    <div><i class="fas fa-phone"></i> <span>+251 000 000 000</span></div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-bar">
+    <div class="nav-inner">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">🍽️</div>
+            <div class="logo-text">NATE<span>CAFÉ & RESTAURANT</span></div>
+        </a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta-btn">Reserve a Table</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="page-header">
+    <div class="page-header-content">
+        <h1>Contact Us</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / Get In Touch
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
+<div class="container">
+    <section class="section">
+        <div class="section-header reveal">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-title">We'd Love to <span>Hear From You</span></h2>
+            <div class="section-line"></div>
+            <p class="section-desc">Reservations, inquiries, feedback — we're here for you</p>
+        </div>
+        <div class="contact-grid reveal">
+            <div class="contact-info">
+                <h3>Nate Café & Restaurant</h3>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Address</h4>
+                        <p>Addis Ababa, Ethiopia</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Phone</h4>
+                        <p>+251 000 000 000</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Email</h4>
+                        <p>natecafe@email.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Hours</h4>
+                        <p>Open Daily: 7:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Telebirr</h4>
+                        <p>Merchant ID: [Your ID]</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-university"></i></div>
+                    <div class="contact-info-text">
+                        <h4>Bank Account</h4>
+                        <p>[Bank Name - Account #]</p>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name *" id="contactName" required>
+                <input type="email" placeholder="Email Address *" id="contactEmail" required>
+                <input type="tel" placeholder="Phone Number" id="contactPhone">
+                <select id="contactSubject">
+                    <option value="">Select Subject</option>
+                    <option value="reservation">Table Reservation</option>
+                    <option value="order">Place an Order</option>
+                    <option value="event">Event Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea placeholder="Your Message *" id="contactMessage" required></textarea>
+                <button onclick="submitContactForm()"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </div>
+        </div>
+        <div class="map-placeholder reveal">
+            <i class="fas fa-map-marked-alt"></i> 📍 Addis Ababa, Ethiopia — Find us on Google Maps
+        </div>
+    </section>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Nate Café & Restaurant</h4>
+            <p>Premium dining in the heart of Addis Ababa. Fresh ingredients, bold flavors, unforgettable moments.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="why-us.html">Why Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+            <p><i class="fas fa-phone"></i> +251 000 000 000</p>
+            <p><i class="fas fa-envelope"></i> natecafe@email.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Nate Café & Restaurant. All rights reserved.</p>
+        <p class="footer-credit">
+            Designed & Developed by <a href="https://addispower.pages.dev" target="_blank" rel="noopener"><i class="fas fa-bolt"></i> AddisPower</a>
+        </p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
