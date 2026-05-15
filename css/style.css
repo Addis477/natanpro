@@ -126,6 +126,23 @@ body {
     align-items: center;
     gap: 10px;
 }
+
+/* ============ IMAGE LOGO (NEW) ============ */
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--green);
+    box-shadow: var(--shadow-green);
+    transition: var(--transition);
+}
+.logo:hover .logo-img {
+    border-color: var(--gold);
+    transform: scale(1.05);
+}
+
+/* Keep old emoji logo style for fallback */
 .logo-icon {
     width: 42px;
     height: 42px;
