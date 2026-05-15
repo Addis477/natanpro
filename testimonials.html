@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Nate Café & Restaurant | Addis Ababa</title>
+    <meta name="description" content="See what our customers say about Nate Café & Restaurant. Real reviews from our happy guests in Addis Ababa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+    <div><i class="fas fa-clock"></i> Open Daily: <span>7:00 AM - 11:00 PM</span></div>
+    <div><i class="fas fa-map-marker-alt"></i> <span>Addis Ababa, Ethiopia</span></div>
+    <div><i class="fas fa-phone"></i> <span>+251 000 000 000</span></div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-bar">
+    <div class="nav-inner">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">🍽️</div>
+            <div class="logo-text">NATE<span>CAFÉ & RESTAURANT</span></div>
+        </a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="testimonials.html" class="active">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta-btn">Reserve a Table</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="page-header" style="background: linear-gradient(0deg, rgba(10,31,18,0.92) 0%, rgba(10,31,18,0.5) 100%), url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1600&q=80') center/cover no-repeat;">
+    <div class="page-header-content">
+        <h1>Customer Reviews</h1>
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / Reviews
+        </div>
+    </div>
+</section>
+
+<!-- ============ TESTIMONIALS SECTION ============ -->
+<div class="container">
+    <section class="section">
+        <div class="section-header reveal">
+            <div class="section-label">Testimonials</div>
+            <h2 class="section-title">What Our <span>Customers Say</span></h2>
+            <div class="section-line"></div>
+            <p class="section-desc">Real feedback from our happy guests</p>
+        </div>
+
+        <!-- Overall Rating -->
+        <div class="reveal" style="text-align:center;margin-bottom:40px;background:var(--green-card);padding:30px;border-radius:var(--radius-lg);border:1px solid rgba(45,138,78,0.2);">
+            <div style="font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold);font-weight:700;">4.8 ⭐</div>
+            <p style="color:var(--gray-light);font-size:1rem;">Average Rating from 200+ Reviews</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">The best café experience in Addis Ababa! The breakfast was incredible, and the coffee is unmatched. I come here every weekend with my family.</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">SA</div>
+                    <div>
+                        <h5>Samuel A.</h5>
+                        <p>Regular Customer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">We hosted my daughter's birthday party at Nate Café and it was absolutely perfect! The staff went above and beyond, and the food was delicious.</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">MT</div>
+                    <div>
+                        <h5>Meron T.</h5>
+                        <p>Event Host</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">Their mocktails are out of this world! The Virgin Mojito and Nate Special are my favorites. Great ambiance for working too — fast WiFi and comfortable seating.</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">DG</div>
+                    <div>
+                        <h5>Dawit G.</h5>
+                        <p>Freelancer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">The pizza here is the best in the city! Wood-fired and perfectly topped. My kids love the Margareta and I'm obsessed with the Nate All Season.</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">HA</div>
+                    <div>
+                        <h5>Hanna A.</h5>
+                        <p>Food Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">We used their catering service for our corporate event and it was flawless. Professional, punctual, and the food was world-class. Highly recommended!</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">AK</div>
+                    <div>
+                        <h5>Abebe K.</h5>
+                        <p>Corporate Client</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">The traditional Ethiopian dishes are so authentic! Shiro Tegabino and Gomen Kitfo remind me of home. This is my go-to spot for traditional food.</p>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">ST</div>
+                    <div>
+                        <h5>Selam T.</h5>
+                        <p>Local Food Lover</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ============ CTA ============ -->
+<div class="container">
+    <section class="section" style="text-align:center;">
+        <div class="reveal">
+            <h2 class="section-title">Join Our <span>Happy Customers</span></h2>
+            <p class="section-desc" style="margin-bottom:24px;">Experience the Nate Café difference for yourself. Reserve your table today!</p>
+            <a href="contact.html" class="btn btn-gold"><i class="fas fa-calendar-check"></i> Reserve Now</a>
+        </div>
+    </section>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Nate Café & Restaurant</h4>
+            <p>Premium dining in the heart of Addis Ababa. Fresh ingredients, bold flavors, unforgettable moments.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="why-us.html">Why Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="testimonials.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+            <p><i class="fas fa-phone"></i> +251 000 000 000</p>
+            <p><i class="fas fa-envelope"></i> natecafe@email.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Nate Café & Restaurant. All rights reserved.</p>
+        <p class="footer-credit">
+            Designed & Developed by <a href="https://addispower.pages.dev" target="_blank" rel="noopener"><i class="fas fa-bolt"></i> AddisPower</a>
+        </p>
+    </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a href="https://wa.me/251000000000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<div class="whatsapp-tooltip">Chat with us!</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
