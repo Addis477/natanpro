@@ -27,9 +27,11 @@
             <img src="https://raw.githubusercontent.com/Addis477/natanpro/c1625dba577af6493216bf3a9a806fe73b8cf582/logo.jpg" alt="Nate Café Logo" class="logo-img">
             <div class="logo-text">NATE<span>CAFÉ & RESTAURANT</span></div>
         </a>
-        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
+        
+        <button class="mobile-menu-btn" id="menuToggle" aria-label="Menu">
             <i class="fas fa-bars"></i>
         </button>
+        
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -42,6 +44,35 @@
         </ul>
     </div>
 </header>
+
+<!-- MOBILE SIDE NAVIGATION -->
+<div class="mobile-side-nav" id="mobileSideNav">
+    <div class="mobile-side-header">
+        <div class="mobile-logo">
+            <img src="https://raw.githubusercontent.com/Addis477/natanpro/c1625dba577af6493216bf3a9a806fe73b8cf582/logo.jpg" alt="Logo" class="mobile-logo-img">
+            <span>Nate Café</span>
+        </div>
+        <button class="close-side-nav" id="closeSideNav">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="about.html">📖 About</a></li>
+        <li><a href="why-us.html" class="active">⭐ Why Us</a></li>
+        <li><a href="gallery.html">🖼️ Gallery</a></li>
+        <li><a href="events.html">🎉 Events</a></li>
+        <li><a href="testimonials.html">💬 Reviews</a></li>
+        <li><a href="contact.html">📞 Contact</a></li>
+        <li><a href="contact.html" class="mobile-cta-btn">🍽️ Reserve a Table</a></li>
+    </ul>
+    <div class="mobile-side-footer">
+        <p><i class="fas fa-phone"></i> +251 911 116 130</p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/251911116130" target="_blank">WhatsApp</a></p>
+        <p><i class="fab fa-telegram"></i> <a href="https://t.me/251911116130" target="_blank">Telegram</a></p>
+    </div>
+</div>
+<div class="side-nav-overlay" id="sideNavOverlay"></div>
 
 <!-- ============ PAGE HEADER ============ -->
 <section class="page-header">
